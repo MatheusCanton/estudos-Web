@@ -1,0 +1,35 @@
+<!--
+    FORM5 - Formulário de Pedidos
+
+    Construa um formulário de pedidos que tenha os seguintes campos:
+     -- Produto: deve ser uma caixa de seleção obrigatória com as opções vazia e as opções: Pizza, Yakissoba e Feijoada. Use o nome do campo 'produto'.
+     -- Quantidade: deve ser obrigatória, possuir apenas números, valor mínimo 1, valor máximo 8 e padrão em 1. Use o nome do campo 'quantidade'.
+     -- Observações: deve ser campo de texto de múltiplas linhas, não obrigatório, máximo de 255 caracteres e com texto padrão 'Por favor, escreva aqui suas observações!'. 
+     Use o nome de campo 'observacoes'
+     -- Botão de Submissão: deve possuir o texto Pedir.
+-->
+<form id="form5" method='POST'>
+	<div>
+		<label for="tipos-produtos">Produto</label>
+		<select name="produto" id="tipos-produtos" required >
+        <option value=""></option>
+        <option>Pizza</option>
+        <option>Yakissoba</option>
+        <option>Feijoada</option>
+        </select>
+	</div>
+	<div>
+		<label for="quantidade-produtos">quantidade</label>
+		<input type="number"  name="quantidade" id="quantidade-produtos" max="8" min="1" value="1"	required>
+	</div>
+	<div>
+		<label for="observacoes-mensagem">Observações</label>
+        <textarea name="observacoes" maxlength="255" id="observacoes-mensagem">Por favor, escreva aqui suas observações!</textarea>
+	</div>
+
+
+
+	<div>
+		<button type="submit">Pedir</button>
+	</div>
+</form>
