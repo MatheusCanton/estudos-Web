@@ -1,0 +1,40 @@
+<!--
+    FORM3 - Formulário de Perfil
+
+    Construa um formulário de perfil de usuário que tenha os seguintes campos:
+     -- Nome Completo: deve ser obrigatório e deve conter no máximo 120 caracteres. Use o nome de campo 'nome-completo'.
+     -- Nascimento: deve ser obrigatório e deve pegar a data de nascimento (sem horas). Use o nome de campo 'nascimento'.
+     -- Perfil Github: deve ser não obrigatório e permitir apenas URL's válidas. Use o nome de campo 'github'.
+     -- Sexo: deve ser uma lista de opções de escolha única visível obrigatória, com as opções: Masculino (valor M) e Feminino (valor F). Use o nome de campo 'sexo'.
+     -- Botão de Submissão: deve possuir o texto Salvar.
+-->
+<form id="form3" method='POST'>
+	<div>
+		<label for="contato-nome">nome-completo</label>
+		<input type="text" name="nome-completo" id="contato-nome" maxlength="120" required /> 
+	</div>
+	<div>
+		<label for="inscrever-nascimento">Data de Nascimento</label>
+		<input type="date" name="nascimento" id="inscrever-nascimento" required />
+	</div>
+	<div>
+		<label for="inscrever-github">Perfil no Github</label>
+        <input type="url" name="github" id="inscrever-github"  />
+	</div>
+	<div>
+	<fieldset>
+        <legend>Sexo</legend>
+            <label for="inscrever-sexo-masc">Masculino</label>
+            <input id="inscrever-sexo-masc" type="radio" name="sexo" value="M" required />
+            <label for="inscrever-sexo-fem">Feminino</label>
+            <input id="inscrever-sexo-fem" type="radio" name="sexo" value="F" required />
+        </fieldset>
+	</div>
+	<div>
+        <button type="submit">Salvar</button>
+    </div>
+
+
+
+
+</form>
