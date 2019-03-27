@@ -1,0 +1,48 @@
+<!--
+    FORM2 - Formulário de Contato
+
+    Construa um formulário de contato que tenha os seguintes campos:
+     -- E-mail: deve ser obrigatório e deve validar e-mails corretamente. Use o nome de campo 'email'.
+     -- Assunto: deve ser uma caixa de seleção obrigatória com uma opção vazia e outras três opções: Problemas, Reclamação e Sugestão. Use o nome de campo 'assunto'.
+     -- Mensagem: deve ser uma caixa de texto de múltiplas linhas obrigatória. Use o nome de campo 'mensagem'.
+     -- Tipo de Resposta: deve ser uma lista de opções de múltipla escolha visíveis, não obrigatória, com as opções: Telefone (valor T), E-mail (valor E) ou Correio (valor C).
+    Use o nome de campo 'tipo-resposta'.
+     -- Botão de Submissão: deve possuir o texto Enviar.
+-->
+<form id="form2" method='POST'>
+	
+	<div>
+		   <label for="contato-email">E-mail</label>
+           <input type="email" name="email" id="contato-email" required />
+	
+	</div>
+	<div>
+		<label for="contato-assunto">Assunto</label>
+            <select name="assunto" id="contato-assunto" required >
+                <option value=""></option>
+                <option value="B">Problemas</option>
+                <option value="R">Reclamação</option>
+                <option value="S">Sugestão</option>
+            </select>
+	</div>
+	<div>
+		<label for="contato-mensagem">Mensagem</label>
+        <textarea name="mensagem" id="contato-mensagem" required></textarea>
+	</div>
+	<div>
+		<fieldset>
+            <legend>Opções de Resposta</legend>
+            <label for="contato-resposta-email">E-mail</label>
+            <input id="contato-resposta-email" type="checkbox" name="tipo-resposta" value="E" />
+            <label for="contato-resposta-telefone">Telefone</label>
+            <input id="contato-resposta-telefone" type="checkbox" name="tipo-resposta" value="T" />
+			<label for="contato-resposta-correio">Correio</label>
+            <input id="contato-resposta-correio" type="checkbox" name="tipo-resposta" value="C" />
+        </fieldset>
+	</div>
+	<div>
+        <button type="submit">Enviar</button>
+    </div>
+	
+
+</form>
