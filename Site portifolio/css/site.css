@@ -1,0 +1,61 @@
+:root{
+    --cor-escura: #5a5a5a;
+    --cor-principal: rgb(71, 208, 250);
+}
+body{
+    font-family:sans-serif;
+    color:gray
+}
+header {
+    background-color: var(--cor-escura);
+    }
+a {
+color: white;
+text-decoration: none;
+}
+footer {
+    background-color: gray;
+}
+#topo {
+    color: rgb(0,0,0);
+}
+
+footer.ul, header.ul {
+    list-style: none;
+}
+a.botao {
+    border: 1px solid white;
+    border-radius: 5px;
+}
+a.botao:hover{
+    color: white;
+}
+a.botao:active{
+    font-size: 200%;
+}
+
+a.inscrever {
+    border-color: greenyellow;
+    color: greenyellow;
+}
+
+a.inscrever:hover {
+    background-color: greenyellow;
+}
+
+a.entrar {
+    border-color: var(--cor-principal);
+    color: var(--cor-principal);
+}
+a.entrar:hover{
+    background-color: var(--cor-principal);
+}
+ul li:first-child a{
+    color: magenta;
+}
+
+/* nth-child()
+nth-child(odd)   ----- par
+nth-child(even)      impar
+
+*/

@@ -1,0 +1,30 @@
+table.lista-disciplinas {
+    width: 100%;
+    border-collapse: collapse; 
+}
+
+table.lista-disciplinas th,
+table.lista-disciplinas td{
+    border: 1px solid black
+}
+
+table.lista-disciplinas th {
+    background-color: aquamarine;
+    color: black;
+}
+table.lista-disciplinas tr:nth-child(even){
+    color:black;
+    background-color: gray
+}
+
+table.lista-disciplinas tr:nth-child(odd){
+    color:red;
+    background-color: whitesmoke;
+}
+table.lista-disciplinas tr:first-child{
+    text-align: center;   
+}
+table.lista-disciplinas tr:last-child{
+    font-weight: 700
+}
+
