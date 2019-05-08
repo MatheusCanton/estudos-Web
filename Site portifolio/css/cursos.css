@@ -1,30 +1,44 @@
-table.lista-disciplinas {
-    width: 100%;
-    border-collapse: collapse; 
+h1.curso-titulo,
+h2.curriculo-titulo {
+    text-align: center;
 }
 
-table.lista-disciplinas th,
-table.lista-disciplinas td{
-    border: 1px solid black
+section.informacoes {
+    width: 50%;
 }
 
-table.lista-disciplinas th {
-    background-color: aquamarine;
-    color: black;
-}
-table.lista-disciplinas tr:nth-child(even){
-    color:black;
-    background-color: gray
+section.informacoes strong.principal {
+    color: var(--cor-principal);
+    font-weight: bolder;
 }
 
-table.lista-disciplinas tr:nth-child(odd){
-    color:red;
-    background-color: whitesmoke;
-}
-table.lista-disciplinas tr:first-child{
-    text-align: center;   
-}
-table.lista-disciplinas tr:last-child{
-    font-weight: 700
+section.informacoes ul {
+    list-style: none;
 }
 
+section.informacoes ul li {
+    border: 0.5px solid gray;
+}
+
+section.informacoes ul li:first-child {
+    border-bottom: 0;
+}
+
+section.sobre {
+    width: 50%;
+    border: 1px solid var(--cor-principal);
+    background: #f8f9fa;
+}
+
+table.matriz {
+    border-collapse: collapse;
+}
+
+table.matriz td, table.matriz th {
+    border: 0.5px solid gray;
+}
+table.matriz th {
+    color: white;
+    background: var(--cor-principal);
+    border-color: var(--cor-principal);
+}

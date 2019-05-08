@@ -7,6 +7,8 @@
 	<title> 
 		LMS IMPACTA
 	</title><!-- Adiciona o título na aba do navegador-->
+	<link rel="stylesheet" href="css/site.css" />
+	<link rel="stylesheet" href="css/forms.css" />
 </head>
 
 <body> <!-- A tag body contém o conteúdo que será mostrado ao usuário-->
@@ -15,8 +17,9 @@
             <img src="imagens/impacta-logo.png" alt="logo da faculdade impacta" /> <!-- anexa imagem e texto alternativo-->
         </a>
 		<nav> <!-- Indica que o conteúdo é composto de links de navegação-->
-			<a href="#">Cursos</a> <!-- Link que não leva a lugar nenhum-->
-			<ul> <!-- Estrutura de lista não ordenada -->
+			<div class="dropdown">
+				<a href="#">Cursos</a> <!-- Link que não leva a lugar nenhum-->
+			<ul class="navegacao"> <!-- Estrutura de lista não ordenada -->
 				<li> <!-- Item de lista -->
 					<a href="cursos/ads.html">Análise e Desenvolvimento de Sistemas</a>
 					<!-- Link para outra página interna-->
@@ -31,45 +34,46 @@
 					<a href="cursos/si.html">Sistemas da Informação</a>
 				</li>
 			</ul>
+			</div>
 			<a href="contato.html">Contato</a>
-			<a href="inscrever.html">Inscreva-se</a>
-			<a href="login.html">Entrar</a>
+			<a href="inscrever.html" class="link-inscricao">Inscreva-se</a>
+			<a href="login.html" class="link-entrar">Entrar</a>
 		</nav>
 	</header>
 	<main> <!-- indica que é o conteúdo principal dessa página -->
   
-		<h1>Inscreva-se</h1>
+		<h1 class="form-titulo">Inscreva-se</h1>
         <form method="POST">
-            <fieldset>
+            <fieldset class="form-item secao">
                 <legend>Informações de Acesso</legend>
-                <p>
+                <div class="form-item">
                     <label for="inscrever-usuario">Usuário</label>
                     <input type="text" name="usuario" id="inscrever-usuario" required />
-                </p>
-                <p>
+                </div>
+                <div class="form-item"> 
                     <label for="inscrever-senha">Senha</label>
                     <input type="password" name="senha" id="inscrever-senha" required />
-                </p>
-                <p>
+                </div>
+                <div class="form-item">
                     <label for="inscrever-confirmar-senha">Confirme a Senha</label>
                     <input type="password" name="confirmar-senha" id="inscrever-confirmar-senha" required />
-                </p>
+                </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="form-item secao">
                 <legend>Informações Pessoais</legend>
-                <p>
+                <div class="form-item">
                     <label for="inscrever-nome">Nome Completo</label>
                     <input type="text" name="nome" id="inscrever-nome" required />
-                </p>
-                <p>
+                </div>
+                <div class="form-item">
                     <label for="inscrever-email">E-mail</label>
                     <input type="email" name="email" id="inscrever-email" required />
-                </p>
-                <p>
+                </div>
+                <div class="form-item">
                     <label for="inscrever-celular">Celular</label>
                     <input type="tel" name="celular" id="inscrever-celular" />
-                </p>
-                <fieldset>
+                </div>
+                <fieldset class="form-item">
                     <legend>Sexo</legend>
                     <label for="inscrever-sexo-masc">Masculino
                         <input id="inscrever-sexo-masc" type="radio" name="sexo" value="M" />
@@ -78,50 +82,50 @@
                         <input id="inscrever-sexo-fem" type="radio" name="sexo" value="F" />
                     </label>
                 </fieldset>
-                <p>
+                <div class="form-item">
                     <label for="inscrever-nascimento">Data de Nascimento</label>
                     <input type="date" name="nascimento" id="inscrever-nascimento" />
-                </p>
-                <p>
+                </div>
+                <div class="form-item">
                     <label for="inscrever-cor">Cor Favorita</label>
                     <input type="color" name="cor" id="inscrever-cor" />
-                </p>
-                <p>
+                </div>
+                <div class="form-item">
                     <label for="inscrever-github">Perfil no Github</label>
                     <input type="url" name="github" id="inscrever-github" />
-                </p>
+                </div>
             </fieldset>
-            <p>
-                <button type="submit">Inscrever</button>
-                <button type="reset">Limpar</button>
-            </p>
+            <div class="acoes">
+                <button class="btn btn-principal" type="submit">Inscrever</button>
+                <button class="btn btn-atencao" type="reset">Limpar</button>
+            </div>
         </form>
 	</main>
 	<footer>
-		<a href="#cabecalho">Topo</a>
-		<ul>
+		<a href="#cabecalho" class="topo">Topo</a>
+		<ul class="navegacao">
 			<li>
-				<a href="https://www.facebook.com/FacImpacta/" target="blank">
+				<a href="https://www.facebook.com/FacImpacta/" class="media facebook" target="blank">
 					Facebook
 				</a>
 			</li>
 			<li>
-				<a href="https://www.instagram.com/faculdadeimpacta/" target="blank">
+				<a href="https://www.instagram.com/faculdadeimpacta/" class="media instagram" target="blank">
 					Instagram
 				</a>
 			</li>
 			<li>
-				<a href="https://www.linkedin.com/edu/faculdade-impacta-tecnologia-161006" target="blank">
+				<a href="https://www.linkedin.com/edu/faculdade-impacta-tecnologia-161006" class="media linkedin" target="blank">
 					Linkedin
 				</a>
 			</li>
 			<li>
-				<a href="https://twitter.com/facimpacta" target="blank">
+				<a href="https://twitter.com/facimpacta" class="media twitter" target="blank">
 					Twitter
 				</a>
 			</li>
 			<li>
-				<a href="https://www.youtube.com/user/GrupoImpacta" target="blank">
+				<a href="https://www.youtube.com/user/GrupoImpacta" class="media youtube" target="blank">
 					Youtube
 				</a>
 			</li>

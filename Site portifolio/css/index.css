@@ -1,34 +1,51 @@
-section.premios{
+aside.jumbotron {
+    background: #e9ecef;
+}
+
+aside.jumbotron button {
+    display: block;
+    margin: 0 auto;
+}
+
+aside.jumbotron h1 {
+    margin: 0;
+    font-weight: 400;
+}
+
+aside.jumbotron h2 {
+    font-weight: normal;
+}
+
+section.premios {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-around;
 }
-section.premios h1{
-    widows: 100%;
-}
-.premio {
-    width: 25em;
-    display: inline-block;
-    margin: 8px 0px;
-    background-color: rgb(0, 0, 0);
-    color: var(--cor-escura);
+
+section.premios h1 {
+    width: 100%;
 }
 
-.premio h2 {
+section.premios article {
+    width: 500px;
+    border-radius: 5px;
     color: white;
-    font-family: sans-serif;
-}
-.premio h3 {
-    color: rgb(1, 18, 255);
-}
-.premio h2, .premio h3{
-    text-transform: uppercase;
+    text-align: center;
+    padding: 8px;
+    margin: 5px;
+    background-color: var(--fundo-preto)
 }
 
-@media (max-width: 500px){
-    .premio{
-        width: 100%;
-        margin-left: 8px;
-        margin-right: 8px;
-    }
+section.premios article h3 {
+    color: var(--cor-principal)
 }
+
+section.empreenda, section.smartclass {
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+section.smartclass img {
+    float: right;
+    margin: 5px 10px;
+}
+
