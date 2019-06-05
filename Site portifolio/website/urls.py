@@ -1,9 +1,8 @@
 from django.urls import path
+
 from . import views
 
-app_name = "website"
-
-urlpatterns = [
+WEBSITE_URLS = ([
     path('', views.home, name='home'),
     path('contato/', views.contato, name='contato')
-]
+], 'website')

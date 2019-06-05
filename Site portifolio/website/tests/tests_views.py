@@ -3,8 +3,7 @@ from django.core import mail
 from django.test import Client, SimpleTestCase
 from django.urls import reverse
 
-from main.tests import BaseTestCases
-
+from lmsimpacta.tests import BaseTestCases
 
 class HomeTestCase(BaseTestCases.SimpleViewTestCase):
     def __init__(self, methodName):

@@ -1,68 +1,77 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block links %}
-<link rel="stylesheet" href="/static/css/forms.css" />
-{% endblock links %}
+	<link rel="stylesheet" href="{% static 'css/forms.css' %}" />
+{% endblock %}
 
 {% block conteudo %}
-<h1 class="form-titulo">Gerar nova senha</h1>
-<h1 class="form-titulo">Inscreva-se</h1>
-<form method="POST">
-	{% csrf_token %}
-	<fieldset class="form-item secao">
-		<legend>Informações de Acesso</legend>
-		<div class="form-item">
-			<label for="inscrever-usuario">Usuário</label>
-			<input type="text" name="usuario" id="inscrever-usuario" required />
-		</div>
-		<div class="form-item">
-			<label for="inscrever-senha">Senha</label>
-			<input type="password" name="senha" id="inscrever-senha" required />
-		</div>
-		<div class="form-item">
-			<label for="inscrever-confirmar-senha">Confirme a Senha</label>
-			<input type="password" name="confirmar-senha" id="inscrever-confirmar-senha" required />
-		</div>
-	</fieldset>
-	<fieldset class="form-item secao">
-		<legend>Informações Pessoais</legend>
-		<div class="form-item">
-			<label for="inscrever-nome">Nome Completo</label>
-			<input type="text" name="nome" id="inscrever-nome" required />
-		</div>
-		<div class="form-item">
-			<label for="inscrever-email">E-mail</label>
-			<input type="email" name="email" id="inscrever-email" required />
-		</div>
-		<div class="form-item">
-			<label for="inscrever-celular">Celular</label>
-			<input type="tel" name="celular" id="inscrever-celular" />
-		</div>
-		<fieldset class="form-item">
-			<legend>Sexo</legend>
-			<label for="inscrever-sexo-masc">Masculino
-				<input id="inscrever-sexo-masc" type="radio" name="sexo" value="M" />
-			</label>
-			<label for="inscrever-sexo-fem">Feminino
-				<input id="inscrever-sexo-fem" type="radio" name="sexo" value="F" />
-			</label>
+	<h1 class="form-titulo">Inscreva-se</h1>
+	<form method="POST" novalidate>
+		{% csrf_token %}
+		{{ formulario.non_field_errors }}
+		<fieldset class="form-item secao">
+			<legend>Informações de Acesso</legend>
+			<div class="form-item">
+				<label for="inscrever-usuario">Usuário</label>
+				<input type="text" name="usuario" id="inscrever-usuario" required />
+				{{ formulario.usuario.errors }}
+			</div>
+			<div class="form-item"> 
+				<label for="inscrever-senha">Senha</label>
+				<input type="password" name="senha" id="inscrever-senha" required />
+				{{ formulario.senha.errors }}
+			</div>
+			<div class="form-item">
+				<label for="inscrever-confirmar-senha">Confirme a Senha</label>
+				<input type="password" name="confirmacao_senha" id="inscrever-confirmar-senha" required />
+				{{ formulario.confirmacao_senha.errors }}
+			</div>
 		</fieldset>
-		<div class="form-item">
-			<label for="inscrever-nascimento">Data de Nascimento</label>
-			<input type="date" name="nascimento" id="inscrever-nascimento" />
+		<fieldset class="form-item secao">
+			<legend>Informações Pessoais</legend>
+			<div class="form-item">
+				<label for="inscrever-nome">Nome Completo</label>
+				<input type="text" name="nome" id="inscrever-nome" required />
+				{{ formulario.nome.errors }}
+			</div>
+			<div class="form-item">
+				<label for="inscrever-email">E-mail</label>
+				<input type="email" name="email" id="inscrever-email" required />
+				{{ formulario.email.errors }}
+			</div>
+			<div class="form-item">
+				<label for="inscrever-celular">Celular</label>
+				<input type="tel" name="celular" id="inscrever-celular" />
+				{{ formulario.celular.errors }}
+			</div>
+			<fieldset class="form-item">
+				<legend>Sexo</legend>
+				<label for="inscrever-sexo-masc">Masculino
+					<input id="inscrever-sexo-masc" type="radio" name="sexo" value="M" />
+				</label>
+				<label for="inscrever-sexo-fem">Feminino
+					<input id="inscrever-sexo-fem" type="radio" name="sexo" value="F" />
+				</label>
+				{{ formulario.sexo.errors }}
+			</fieldset>
+			<div class="form-item">
+				<label for="inscrever-nascimento">Data de Nascimento</label>
+				<input type="date" name="nascimento" id="inscrever-nascimento" />
+			</div>
+			<div class="form-item">
+				<label for="inscrever-cor">Cor Favorita</label>
+				<input type="color" name="cor" id="inscrever-cor" />
+			</div>
+			<div class="form-item">
+				<label for="inscrever-github">Perfil no Github</label>
+				<input type="url" name="github" id="inscrever-github" />
+				{{ formulario.github.errors }}
+			</div>
+		</fieldset>
+		<div class="acoes">
+			<button class="btn btn-principal" type="submit">Inscrever</button>
+			<button class="btn btn-atencao" type="reset">Limpar</button>
 		</div>
-		<div class="form-item">
-			<label for="inscrever-cor">Cor Favorita</label>
-			<input type="color" name="cor" id="inscrever-cor" />
-		</div>
-		<div class="form-item">
-			<label for="inscrever-github">Perfil no Github</label>
-			<input type="url" name="github" id="inscrever-github" />
-		</div>
-	</fieldset>
-	<div class="acoes">
-		<button class="btn btn-principal" type="submit">Inscrever</button>
-		<button class="btn btn-atencao" type="reset">Limpar</button>
-	</div>
-</form>
-{% endblock conteudo %}
+	</form>
+{% endblock %}

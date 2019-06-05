@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block links %}
+	<link rel="stylesheet" href="{% static 'css/forms.css' %}" />
+{% endblock %}
+
+{% block conteudo %}
+	<h1 class="form-titulo">{{titulo}}</h1>
+	<form method="POST">
+        {% csrf_token %}
+		{{formulario.non_field_errors}}
+		{% for campo in formulario %}
+			<div class="form-item">
+				{{campo.label_tag}}
+				{{campo}}				
+				{{campo.erros}}
+		{%endfor%}
+		<div class="acoes">
+			<button class="btn btn-principal" type="submit">Enviar</button>
+		</div>
+	</form>
+{% endblock %}

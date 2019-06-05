@@ -1,7 +1,7 @@
 from django.test import TestCase
 from django.conf import settings
 
-from main.tests import BaseTestCases
+from lmsimpacta.tests import BaseTestCases
 
 class NotasTestCase(BaseTestCases.SimpleViewTestCase):
     def __init__(self, methodName):
